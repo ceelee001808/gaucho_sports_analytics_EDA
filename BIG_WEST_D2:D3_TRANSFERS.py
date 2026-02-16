@@ -167,7 +167,7 @@ if len(bw_matches) > 0:
         plt.text(r["plate_appearances"], r["ops"], r["Player.Name"], fontsize=8)
     plt.xlabel("Plate Appearances (last D2 season)")
     plt.ylabel("OPS (last D2 season)")
-    plt.title("Matched Big West D2 transfers: PA vs OPS")
+    plt.title("Matched Big West D2 transfers: PA vs OPS (BASED ON AVAILABLE DATA)")
     plt.tight_layout()
     plt.show()
 
@@ -177,5 +177,7 @@ extract_path = "/mnt/data/big_west_d2_d3_transfers_filtered.csv"
 bw_unique[
     ["Player.Name", "Team", "Year.s.", "Transfer.Level", "has_d2_stats", "best_d2_name_clean"]
 ].to_csv(extract_path, index=False)
+
+print(f"\nSaved filtered extract to: {extract_path}")
 
 print(f"\nSaved filtered extract to: {extract_path}")
